@@ -6,24 +6,6 @@
     </title>
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <style>
-        .collapsible {
-            cursor: pointer;
-            padding: 10px;
-            background-color: #f1f1f1;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            margin-bottom: 5px;
-        }
-
-        .content {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-            background-color: #f9f9f9;
-            border-left: 3px solid #ccc;
-        }
     </style>
 </head>
 <body>
@@ -45,15 +27,38 @@
     <p>
         The St. Adalberts GLVN program aims to provide blah blah bla blah.
     </p>
-    <!-- Basic collapsible text to be used more -->
-    <button class="collapsible">collapsible text</button>
-    <div class="content">
-        <p>text</p>
+    <button class="collapsible-button">Contact Information</button>
+    <div class="content-button">
+        <p>button content</p>
     </div>
+
+    <!-- Arrow Collapsible -->
+    <div class="collapsible-arrow">
+        <span class="arrow">&#9654;</span>
+        <span>Program Overview</span>
+    </div>
+    <div class="content-arrow">
+        <p>arrow content</p>
+    </div>
+    <!-- Basic collapsible text to be used more -->
     <script>
-        var coll = document.getElementsByClassName("collapsible");
-        for (var i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
+        var collButton = document.getElementsByClassName("collapsible-button");
+        for (var i = 0; i < collButton.length; i++) {
+            collButton[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+        /* JavaScript for the arrow collapsible */
+        var collArrow = document.getElementsByClassName("collapsible-arrow");
+        for (var i = 0; i < collArrow.length; i++) {
+            collArrow[i].addEventListener("click", function() {
                 this.classList.toggle("active");
                 var content = this.nextElementSibling;
                 if (content.style.display === "block") {

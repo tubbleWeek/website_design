@@ -25,3 +25,56 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
+        /* Styling for the square button collapsible */
+        .collapsible-button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            margin-bottom: 5px;
+            width: 100%;
+            display: block;
+        }
+
+        .content-button {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border-left: 3px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+/* Styling for the arrow collapsible */
+.collapsible-arrow {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+}
+
+.collapsible-arrow .arrow {
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.content-arrow {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border-left: 3px solid #ccc;
+}
+
+/* Rotate the arrow when the content is visible */
+.active .arrow {
+    transform: rotate(90deg);
+}
