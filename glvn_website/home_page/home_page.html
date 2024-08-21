@@ -27,6 +27,7 @@
     <p>
         The St. Adalberts GLVN program aims to provide blah blah bla blah.
     </p>
+    <!-- Basic collapsible text to be used more -->
     <button class="collapsible-button">Contact Information</button>
     <div class="content-button">
         <p>button content</p>
@@ -40,8 +41,8 @@
     <div class="content-arrow">
         <p>arrow content</p>
     </div>
-    <!-- Basic collapsible text to be used more -->
     <script>
+        /*Script for square button*/
         var collButton = document.getElementsByClassName("collapsible-button");
         for (var i = 0; i < collButton.length; i++) {
             collButton[i].addEventListener("click", function() {
@@ -55,7 +56,7 @@
             });
         }
 
-        /* JavaScript for the arrow collapsible */
+        /* Script for the arrow button */
         var collArrow = document.getElementsByClassName("collapsible-arrow");
         for (var i = 0; i < collArrow.length; i++) {
             collArrow[i].addEventListener("click", function() {
