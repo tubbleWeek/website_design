@@ -6,7 +6,24 @@
     </title>
     <link rel="stylesheet" type="text/css" href="../styles.css">
     <style>
-        
+        .collapsible {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border-left: 3px solid #ccc;
+        }
     </style>
 </head>
 <body>
@@ -20,8 +37,27 @@
     </ul>
     <!-- h1 may be to big change in future -->  
     <h1>
-    Welcome to St. Adalberts GLVN program
+        Welcome to St. Adalberts GLVN program
     </h1>
+    <!-- Basic collapsible text to be used more -->
+    <button class="collapsible">More about St. Adalberts GLVN program</button>
+    <div class="content">
+        <p>The St. Adalberts GLVN program is designed to provide comprehensive religious education to our community. The program focuses on faith formation, community service, and spiritual growth for all participants.</p>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 St. Adalberts GLVN Program. All rights reserved.</p>
