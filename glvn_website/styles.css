@@ -1,6 +1,6 @@
 /* Main header alignment */
 h1{text-align: center;}
-
+h2{text-align: left;}
 /* navigation bar */
 ul {
     list-style-type: none;
