@@ -1,64 +1,57 @@
 <html>
 <head>
     <title>Language Selection Example</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="popup.css">
     <style>
-        /* Styling for the language popup */
-        .language-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            display: none; /* Initially hidden */
-            z-index: 1000;
-        }
-
-        .language-popup h2 {
+        /* General page styles */
+        body {
+            font-size: 20px; /* Set the base font size */
             margin: 0;
-            padding-bottom: 10px;
-        }
-
-        .language-popup ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .language-popup ul li {
-            margin: 5px 0;
-            cursor: pointer;
-        }
-
-        /* Overlay for the popup */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: none; /* Initially hidden */
-            z-index: 999;
-        }
-
-        /* Example content */
-        #content {
             padding: 20px;
+            font-family: Arial, sans-serif;
         }
 
-        #language-button {
-            margin: 10px 0;
-            cursor: pointer;
+        /* Container for buttons */
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center the buttons horizontally */
+            align-items: center; /* Align items vertically (if needed) */
+            margin: 20px 0; /* Add some space above and below the button container */
+        }
+
+        .link-button {
+            padding: 15px 30px; /* Larger padding for bigger buttons */
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.5em; /* Larger font size */
+            margin: 0 10px; /* Add space between buttons */
+        }
+
+        .link-button:hover {
+            background-color: #45a049; /* Darken the button on hover */
         }
     </style>
 </head>
 <body>
-    <div id="content">
+    <header>
+        test test test
+    </header>
+    <h1>test test</h1>
+    <div class="button-container">
+        <a id="heading" href="page1.html" class="link-button">Go to Page 1</a>
+        <a id="description" href="page2.html" class="link-button">Go to Page 2</a>
+    </div>
+
+    <!-- <div id="content">
         <h1 id="heading">Home page</h1>
         <p id="description">Home page</p>
-        <!-- <button id="language-button">Select Language</button> -->
-    </div>
+         <button id="language-button">Select Language</button>
+    </div> -->
 
     <!-- Language selection popup -->
     <div class="overlay" id="overlay"></div>
@@ -69,7 +62,9 @@
             <li onclick="changeLanguage('vn')">Vietnamese</li>
         </ul>
     </div>
-
+    <p>
+        test test test
+    </p>
     <script>
         // JavaScript translations
         const translations = {
