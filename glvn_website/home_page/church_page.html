@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <title>
+        Home Page
+    </title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <style>
+        /* Styling for the language popup */
+        .language-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            display: none; /* Initially hidden */
+            z-index: 1000;
+        }
+
+        .language-popup h2 {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        .language-popup ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .language-popup ul li {
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        /* Overlay for the popup */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none; /* Initially hidden */
+            z-index: 999;
+        }
+
+        /* Example content */
+        #content {
+            padding: 20px;
+        }
+
+        #language-button {
+            margin: 10px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <ul>
+        <li><a href="../home_page/church_page.html">Church Home</a></li>
+        <li><a href="../home_page/school_page.html">School Home</a></li>
+        <li><a href="../important_forms/important_forms.html">Important Forms</a></li>
+        <li><a href="../schedule_page/schedule_page.html">Bell Schedule</a></li>
+        <li><a href="../schedule_page/schedule_page.html">Calendar</a></li>
+        <li><a href="../teach_page/teach_page.html">Staff and Faculty</a></li>
+    </ul>
+    <!-- h1 may be to big change in future -->  
+    <h1>
+        Welcome to St. Adalberts Church
+    </h1>
+    <h2>
+        Mission
+    </h2>
+    <p>
+        St Adalberts blah blah blah.
+    </p>
+    <!-- Basic collapsible text to be used more -->
+    <button class="collapsible-button">Contact Information</button>
+    <div class="content-button">
+        <p>button content</p>
+    </div>
+
+    <!-- Arrow Collapsible -->
+    <div class="collapsible-arrow">
+        <span class="arrow">&#9654;</span>
+        <span>Program Overview</span>
+    </div>
+    <div class="content-arrow">
+        <p>arrow content</p>
+    </div>
+
+    <script>
+        /*Script for square button*/
+        var collButton = document.getElementsByClassName("collapsible-button");
+        for (var i = 0; i < collButton.length; i++) {
+            collButton[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+        /* Script for the arrow button */
+        var collArrow = document.getElementsByClassName("collapsible-arrow");
+        for (var i = 0; i < collArrow.length; i++) {
+            collArrow[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+        </script>    
+        
+        <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 St. Adalberts GLVN Program. All rights reserved.</p>
+        <ul>
+            <!-- <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li> -->
+            <li><a href="../contacts/contact_page.html">Contact Us</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
