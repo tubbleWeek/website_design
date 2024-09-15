@@ -10,6 +10,9 @@
             margin: 0;
             padding: 20px;
             font-family: Arial, sans-serif;
+            background-image: url(../images/LOGO.docx.png);
+            background-size: 99vw 100vh;
+            background-color: #45a049;
         }
 
         /* Container for buttons */
@@ -35,13 +38,17 @@
         .link-button:hover {
             background-color: #45a049; /* Darken the button on hover */
         }
+        #text{
+            padding: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header id="text">
         test test test
     </header>
-    <h1>test test</h1>
+    <h1 id="text">test test</h1>
     <div class="button-container">
         <a id="heading" href="school_page.html" class="link-button">Go to Church Home page</a>
         <a id="description" href="church_page.html" class="link-button">Go to School Home page</a>
@@ -62,7 +69,7 @@
             <li onclick="changeLanguage('vn')">Vietnamese</li>
         </ul>
     </div>
-    <p>
+    <p id="text">
         test test test
     </p>
     <script>
